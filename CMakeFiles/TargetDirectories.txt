@@ -1,0 +1,5 @@
+/home/ccw/Multimedia_networking/Mid/mmsys23lib-dev-xzc/CMakeFiles/rebuild_cache.dir
+/home/ccw/Multimedia_networking/Mid/mmsys23lib-dev-xzc/CMakeFiles/edit_cache.dir
+/home/ccw/Multimedia_networking/Mid/mmsys23lib-dev-xzc/mpd/CMakeFiles/rebuild_cache.dir
+/home/ccw/Multimedia_networking/Mid/mmsys23lib-dev-xzc/mpd/CMakeFiles/edit_cache.dir
+/home/ccw/Multimedia_networking/Mid/mmsys23lib-dev-xzc/mpd/CMakeFiles/MPDtest.dir
