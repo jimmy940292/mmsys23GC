@@ -227,7 +227,6 @@ public:
         for (auto &&sessionItor : new_queue)
         {
             // auto weight = operation_i(max_rtt, sessionItor.first);
-            auto score = sessionItor.second->GetRtt();
             weighted_queue.emplace(max_rtt, sessionItor.second);
         }
 
