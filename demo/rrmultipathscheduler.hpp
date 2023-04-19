@@ -190,18 +190,37 @@ public:
     }
 
     // CCW
+    // QuicTime::Delta operation_i(QuicTime::Delta lhs, QuicTime::Delta rhs)
+    // {
+    //     QuicTime::Delta i = QuicTime::Delta::Zero();
+    //     QuicTime::Delta dividend = lhs;
+    //     while (dividend > QuicTime::Delta::Zero())
+    //     {
+    //         dividend = dividend - rhs;
+    //         QuicTime::Delta d = QuicTime::Delta::Zero();
+    //         d.time_offset_ = 1;
+    //         i = i + d;
+    //     }
+
+    //     return i;
+    // }
+
+    // SYZ
     QuicTime::Delta operation_i(QuicTime::Delta lhs, QuicTime::Delta rhs)
     {
         QuicTime::Delta i = QuicTime::Delta::Zero();
-        QuicTime::Delta dividend = lhs;
+        // QuicTime::Delta dividend = lhs;
+        QuicTime::Delta dividend = QuicTime::Delta::Zero();
+        dividend.time_offset_ = lhs.time_offset_;
+        QuicTime::Delta r_dividend = QuicTime::Delta::Zero();
+        r_dividend.time_offset_ = rhs.time_offset_;
         while (dividend > QuicTime::Delta::Zero())
         {
-            dividend = dividend - rhs;
+            dividend = dividend - r_dividend;
             QuicTime::Delta d = QuicTime::Delta::Zero();
             d.time_offset_ = 1;
             i = i + d;
         }
-
         return i;
     }
 
